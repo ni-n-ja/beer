@@ -7,6 +7,10 @@ var alpha = 0;
 var beta = 0;
 var gamma = 0;
 
+var abs;
+var alp;
+var bet;
+var gam;
 
 function handleOrientation(event) {
     absolute = event.absolute;
@@ -30,6 +34,11 @@ function animate(timestamp) {
     context.fillStyle = 'rgba(0,255,0,64)';
     context.fillRect(150, 0, 50, gamma);
 
+    abs.innerHTML = "abosolute: ";
+    alp.innerHTML = "alpha: ";
+    bet.innerHTML = "beta: ";
+    gam.innerHTML = "gumma: ";
+
     requestAnimationFrame(animate);
 }
 
@@ -37,6 +46,12 @@ window.onload = function() {
 
     canvas = document.getElementById("canvas");
     context = canvas.getContext("2d");
+
+    abs = document.getElementById("abs");
+    alp = document.getElementById("alp");
+    bet = document.getElementById("bet");
+    gam = document.getElementById("gam");
+
     window.addEventListener("deviceorientation", handleOrientation, true);
     console.log(absolute, alpha, beta, gamma);
     animate();
