@@ -34,10 +34,10 @@ function animate(timestamp) {
     context.fillStyle = 'rgba(0,255,0,64)';
     context.fillRect(150, 0, 50, gamma);
 
-    abs.innerHTML = "abosolute: ";
-    alp.innerHTML = "alpha: ";
-    bet.innerHTML = "beta: ";
-    gam.innerHTML = "gumma: ";
+    abs.innerHTML = "abosolute: " + absolute;
+    alp.innerHTML = "alpha: " + alpha;
+    bet.innerHTML = "beta: " + beta;
+    gam.innerHTML = "gumma: " + gamma;
 
     requestAnimationFrame(animate);
 }
