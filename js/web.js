@@ -19,28 +19,16 @@ function animate(timestamp) {
     context.clearRect(0, 0, 200, 200);
 
     context.strokeStyle = 'rgba(255,0,135,64)';
-    context.beginPath();
-    context.moveTo(1, 0);
-    context.lineTo(1, absolute);
-    context.stroke();
+    canvas.fillRect(0, 0, 50, absolute);
 
-    context.strokeStyle = 'rgba(255,0,135,64)';
-    context.beginPath();
-    context.moveTo(3, 0);
-    context.lineTo(3, alpha);
-    context.stroke();
+    context.strokeStyle = 'rgba(0,0,255,64)';
+    canvas.fillRect(50, 0, 50, alpha);
 
-    context.strokeStyle = 'rgba(255,0,135,64)';
-    context.beginPath();
-    context.moveTo(4, 0);
-    context.lineTo(4, beta);
-    context.stroke();
+    context.strokeStyle = 'rgba(255,0,0,64)';
+    canvas.fillRect(100, 0, 50, beta);
 
-    context.strokeStyle = 'rgba(255,0,135,64)';
-    context.beginPath();
-    context.moveTo(6, 0);
-    context.lineTo(6, gamma);
-    context.stroke();
+    context.strokeStyle = 'rgba(0,255,0,64)';
+    canvas.fillRect(150, 0, 50, gamma);
 
     requestAnimationFrame(animate);
 }
